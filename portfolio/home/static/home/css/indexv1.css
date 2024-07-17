@@ -1,0 +1,302 @@
+:root {
+    --maincolour: #f9f8c8;
+    --secondarycolour: #242424;
+    --introtime: 2s;
+    --introdelay: 3s;
+    --opendelay: 1.5s;
+}
+
+.maincontent {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    background-color: var(--maincolour);
+    border-radius: 1vw;
+    transform: scale(0.8) translateY(-2svh);
+    border: calc(0.05vw + 0.05svh) solid black;
+    overflow: clip;
+}
+
+.line-images {
+    animation: scroll 6s linear infinite;
+}
+
+.l1-images {
+    position: absolute;
+    left: 0px;
+    width: 25%;
+    height: 33.333%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.l2-images {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 33.333%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: scroll 4.5s linear infinite; 
+}
+
+.l3-images {
+    position: absolute;
+    left: 75%;
+    width: 25%;
+    height: 33.333%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: scroll 8s linear infinite;
+}
+
+.line-images {
+    transform: translateY(0px) scale(0.98);
+}
+
+.intro-text {
+    position: absolute;
+    left: 50vw;
+    font-family: 'Dennis Sans', sans-serif;
+    text-align: center;
+    color: #242424;
+    transform: translate(-50%, -50%);
+}
+
+.intro-line1 {
+    font-size: 3.55vmax;
+
+    top: 38svh;
+}
+
+.intro-line2 {
+    font-size: calc(2vw + 3svh);
+    top: 47svh;
+}
+
+.intro-anim-running {
+    animation: intro-move var(--introtime) ease var(--introdelay) forwards;
+
+}
+
+#cover {
+    position: absolute;
+    transform: rotate(180deg);
+    transform-origin: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 60;
+}
+
+#intro {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    width: 100vw; 
+    height: 100svh;
+}
+
+#links {
+    right: 2.5vw;
+    top: 10svh;
+    width: 48.75vw;
+    height: 80svh;
+    animation: scaleup 1s ease calc(var(--introtime) + var(--introdelay) - var(--opendelay) + 0.25s) forwards;
+}
+
+#name {
+    left: 2.5vw;
+    bottom: 10svh;
+    width: 43.75vw;
+    height: 37.5svh;
+    animation: scaleup 2s ease calc(var(--introtime) + var(--introdelay) - var(--opendelay) + 0.55s) forwards;
+}
+
+#namecard {
+    font-family: 'Dennis Sans', sans-serif;
+    font-size: 550%;
+    padding-left: 5%;
+    padding-top: 3%;
+    color: var(--secondarycolour);
+}
+
+#images {
+    left: 2.5vw;
+    top: 10svh;
+    width: 43.75vw;
+    height: 37.5svh;
+    animation: scaleup 1s ease calc(var(--introtime) + var(--introdelay) - var(--opendelay) + 0s) forwards;
+}
+
+#image1-l1 {
+    top: 0%;
+    background-image: url("../images/edward-pretsi-xw3IEIJHdNs-unsplash.jpg");
+}
+
+#image2-l1 {
+    top: 33.333%;
+    background-image: url("../images/mike-hindle-kioOQjh6yfU-unsplash.jpg");
+}
+
+#image3-l1 {
+    top: 66.666%;
+    background-image: url("../images/nejc-soklic-_c21lKtR9-M-unsplash.jpg");
+}
+
+#r1-image-l1 {
+    top: -100%;
+    background-image: url("../images/edward-pretsi-xw3IEIJHdNs-unsplash.jpg");
+}
+
+#r2-image-l1 {
+    top: -66.666%;
+    background-image: url("../images/mike-hindle-kioOQjh6yfU-unsplash.jpg");
+}
+
+#r3-image-l1 {
+    top: -33.333%;
+    background-image: url("../images/nejc-soklic-_c21lKtR9-M-unsplash.jpg");
+}
+
+#image1-l2 {
+    top: 0%;
+    background-image: url("../images/pawel-czerwinski-4jDA3ViailY-unsplash.jpg");
+}
+
+#image2-l2 {
+    top: 33.333%;
+    background-image: url("../images/europeana-sSFtbo19CVo-unsplash.jpg");
+}
+
+#image3-l2 {
+    top: 66.666%;
+    background-image: url("../images/francesco-ungaro-JfAPExcZOkU-unsplash.jpg");
+}
+
+#r1-image-l2 {
+    top: -100%;
+    background-image: url("../images/pawel-czerwinski-4jDA3ViailY-unsplash.jpg");
+}
+
+#r2-image-l2 {
+    top: -66.666%;
+    background-image: url("../images/europeana-sSFtbo19CVo-unsplash.jpg");
+}
+
+#r3-image-l2 {
+    top: -33.333%;
+    background-image: url("../images/francesco-ungaro-JfAPExcZOkU-unsplash.jpg");
+}
+
+#image1-l3 {
+    top: 0%;
+    background-image: url("../images/sander-traa-URp04ptuhyM-unsplash.jpg");
+}
+
+#image2-l3 {
+    top: 33.333%;
+    background-image: url("../images/ernest-imoesi-TeGtGGu1IpU-unsplash.jpg");
+}
+
+#image3-l3 {
+    top: 66.666%;
+    background-image: url("../images/benjamin-ashton-2CqhW4RN4Qo-unsplash.jpg");
+}
+
+#r1-image-l3 {
+    top: -100%;
+    background-image: url("../images/sander-traa-URp04ptuhyM-unsplash.jpg");
+}
+
+#r2-image-l3 {
+    top: -66.666%;
+    background-image: url("../images/ernest-imoesi-TeGtGGu1IpU-unsplash.jpg");
+}
+
+#r3-image-l3 {
+    top: -33.333%;
+    background-image: url("../images/benjamin-ashton-2CqhW4RN4Qo-unsplash.jpg");
+}
+
+#rotatedimagesystem {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    scale: 1.2;
+    transform: rotate(5deg);
+    background: linear-gradient(135deg, #000000, #222222);
+    /* animation: sway 5s cubic-bezier(0.58, 0.22, 0.39, 0.75) alternate infinite; */
+}
+
+html {
+    background-color: var(--secondarycolour);
+    shape-rendering: crispEdges;
+    backface-visibility: hidden;
+}
+
+@keyframes scaleup {
+    0% {
+        transform: scale(0.8) translateY(-2svh);
+    }
+    100% {
+        transform: scale(1) translateY(0svh);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0%) scale(0.98);
+    }
+
+    100% {
+        transform: translateY(300%) scale(0.98);
+    }
+}
+
+@keyframes intro-move {
+    0% {
+        transform: rotate(180deg);
+        transform-origin: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    55% {
+        transform: rotate(-8deg);
+        transform-origin: center;
+        top: calc(70svh - 2.5vw);
+        left: 47.5vw;
+        width: 5vw;
+        height: 5vw;
+        /* top: -120svh; */
+    }
+
+    100% {
+        transform: rotate(548deg);
+        transform-origin: center;
+        /* top: 10vw; */
+        left: 47.5vw;
+        width: 5vw;
+        height: 5vw;
+        top: -40svh;
+    }
+}
