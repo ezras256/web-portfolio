@@ -1,6 +1,10 @@
 :root {
     background-color: #1f1f1f;
+    
     --aspectratio: 1;
+    --introblockheight: 20svh;
+    --maincolour: #272727;
+    --offset: 2;
 }
 
 #intro {
@@ -15,31 +19,62 @@
     left: 0px;
     width: 100vw;
     height: 100svh;
-    background-color: #272727;
-    filter: drop-shadow(0px 0px 10%);
+    /* background-color: #272727; */
+}
+
+.cover-item:not(.active-item, .new-item) {
+    position: absolute;
+    top: calc(25svh * (var(--position) + var(--offset) - 1) - (var(--introblockheight) / 2));
+    left: 40vw;
+    width: 20vw;
+    height: var(--introblockheight);
+    border-radius: 1.4vw;
     z-index: 40;
 }
 
-.intro-anim-running {
-    animation: intro 2s ease 1s forwards;
+.active-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100svh;
+    z-index: 1000;
+    animation: intro 1s ease 1.5s forwards;
+}
+
+.anim-ended {
+    position: absolute;
+    top: calc(25svh * (var(--position) + var(--offset) - 1) - (var(--introblockheight) / 2));
+    left: 40vw;
+    width: 20vw;
+    height: var(--introblockheight);
+    border-radius: 1.4vw;
+    z-index: 40;
+}
+
+.new-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100svh;
+    z-index: 1000;
+    transform: scale(0.2); 
+    border-radius: 7vw;
+    animation: intro 1s ease 0.5s forwards reverse;
 }
 
 @keyframes intro {
     0% {
-        transform: rotate(0deg) scaleX(1) scaleY(1);
-        top: 0px;
         border-radius: 0px;
+        transform: scale(1);
     }
-
-    65% {
-        border-radius: 10%;
-        transform: rotate(-190deg) scaleX(calc(var(--aspectratio) * 0.3)) scaleY(0.3);
-        top: -30svh;
-    }
-
     100% {
-        border-radius: 10%;
-        transform: rotate(250deg) scaleX(calc(var(--aspectratio) * 0.3)) scaleY(0.3);
-        top: 100svh;
+        border-radius: 7vw;
+        transform: scale(0.2);
     }
+}
+
+@keyframes slide {
+    
 }
